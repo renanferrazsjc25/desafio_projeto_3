@@ -1,0 +1,324 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f6f6;
+  color: #202122;
+  line-height: 1.7;
+}
+
+/* TOPO */
+.topbar {
+  background: white;
+  border-bottom: 1px solid #dcdcdc;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.topbar-container {
+  max-width: 1500px;
+  margin: auto;
+  padding: 14px 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area h1 {
+  font-size: 28px;
+  color: #202122;
+}
+
+.logo-area span {
+  font-size: 13px;
+  color: #777;
+}
+
+/* PESQUISA */
+.search-box {
+  display: flex;
+  gap: 10px;
+}
+
+.search-box input {
+  width: 320px;
+  padding: 10px;
+  border: 1px solid #c8ccd1;
+  border-radius: 8px;
+  outline: none;
+}
+
+.search-box button {
+  padding: 10px 18px;
+  border: none;
+  background: #3366cc;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #254e9c;
+}
+
+/* LAYOUT */
+.container {
+  max-width: 1500px;
+  margin: 20px auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: 250px 1fr 300px;
+  gap: 20px;
+}
+
+/* SIDEBARS */
+.left-sidebar,
+.right-sidebar {
+  align-self: start;
+}
+
+.left-sidebar section,
+.infobox {
+  background: white;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+/* MENU */
+.left-sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.left-sidebar ul {
+  list-style: none;
+}
+
+.left-sidebar li {
+  margin-bottom: 14px;
+}
+
+.left-sidebar a {
+  text-decoration: none;
+  color: #3366cc;
+}
+
+.left-sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* CONTENT */
+.content {
+  background: white;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 40px;
+}
+
+/* HEADER ARTICLE */
+.article-header {
+  margin-bottom: 30px;
+}
+
+.article-header h1 {
+  font-size: 46px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.article-header p {
+  color: #444;
+  font-size: 18px;
+}
+
+/* HERO */
+.hero-image {
+  margin-bottom: 40px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+section p {
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+/* CARDS */
+.game-card {
+  display: flex;
+  gap: 20px;
+
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  margin-bottom: 20px;
+
+  transition: 0.3s;
+}
+
+.game-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.game-card img {
+  width: 240px;
+  object-fit: cover;
+}
+
+.game-card div {
+  padding: 20px;
+}
+
+.game-card h3 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+/* PERSONAGENS */
+.character-list {
+  padding-left: 20px;
+}
+
+.character-list li {
+  margin-bottom: 10px;
+}
+
+/* INFOBOX */
+.infobox img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.infobox h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.infobox ul {
+  list-style: none;
+}
+
+.infobox li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .game-card {
+    flex-direction: column;
+  }
+
+  .game-card img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .article-header h1 {
+    font-size: 34px;
+  }
+}
+
+/* MENU DE NAVEGAÇÃO SUPERIOR */
+.topbar nav {
+  max-width: 1500px;
+  margin: auto;
+  padding: 0 25px 14px 25px; /* Espaçamento interno nas laterais e fundo */
+}
+
+.topbar nav ul {
+  list-style: none; /* Remove as bolinhas da lista */
+  display: flex; /* Alinha os itens em linha horizontal */
+  gap: 24px; /* Espaçamento idêntico entre os links */
+}
+
+.topbar nav a {
+  text-decoration: none; /* Remove o sublinhado padrão */
+  color: #54595d; /* Tom cinza escuro moderno para links neutros */
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 0; /* Área interna superior e inferior */
+  display: inline-block;
+  position: relative; /* Necessário para a animação da linha inferior */
+  transition: color 0.2s ease;
+}
+
+/* Efeito Hover nos Links */
+.topbar nav a:hover {
+  color: #3366cc; /* Muda para o azul padrão do seu site ao passar o mouse */
+}
+
+/* Linha decorativa que surge ao passar o mouse (Opcional, estilo moderno) */
+.topbar nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3366cc;
+  transition: width 0.2s ease;
+}
+
+.topbar nav a:hover::after {
+  width: 100%; /* Expande a linha azul sob o link */
+}
+
+footer {
+  background: lightgray;
+  border-top: 1px solid #dcdcdc;
+  margin-top: 40px;
+  text-align: center;
+}
